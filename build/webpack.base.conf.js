@@ -12,7 +12,14 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: function () {
     let ent = {}
-    ent[JSON.parse(process.env.npm_config_argv).remain] = './src/components/' + JSON.parse(process.env.npm_config_argv).remain + '/index.js'
+    let entrys = JSON.parse(process.env.npm_config_argv).remain
+    if (entrys.length !== 0) {
+      entrys.map(en => {
+        ent[en] = './src/components/' + en + '/index.js'
+      })
+    } else {
+      ent['yue-ui'] = './src/main.js'
+    }
     return ent
   },
   output: {
