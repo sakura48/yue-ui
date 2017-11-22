@@ -1,5 +1,5 @@
 import HelloWorld from './components/helloworld/index.js'
-import carrousel3d from  './components/carrousel3d/index.js'
+import carrousel3d from './components/carrousel3d/index.js'
 import todo from './components/todo/index.js'
 
 const components = [
