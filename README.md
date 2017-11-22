@@ -1,27 +1,28 @@
 # yue-ui
 
-> A Vue.js project
+> 基于Vue的UI组件库
 
-## Build Setup
+## 安装
 
-``` bash
-# install dependencies
+```
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 启动热重载服务 localhost:8080
 npm run dev
 
-# build for production with minification
+# 打包生产环境组件库
 npm run build
+
+# 打包单一组件
+npm run build 'component name'
 
 # build for production and view the bundle analyzer report
 npm run build --report
 
-# run unit tests
+# 静态代码检查
 npm run unit
 
-# run all tests
+# 运行测试用例
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
