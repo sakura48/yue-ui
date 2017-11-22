@@ -10,8 +10,10 @@ function resolve (dir) {
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    app: './src/main.js'
+  entry: function () {
+    let ent = {}
+    ent[JSON.parse(process.env.npm_config_argv).remain] = './src/components/' + JSON.parse(process.env.npm_config_argv).remain + '/index.js'
+    return ent
   },
   output: {
     path: config.build.assetsRoot,
