@@ -23,12 +23,6 @@
 
 ## Example
 
-<btn btnstyle="ghost">
-  button
-</btn>
-<btn btnstyle="micro-texture" state="disabled">
-  button
-</btn>
-<btn btnstyle="micro-texture" @click="dosomething">
-  button
-</btn>
+\<btn btnstyle="ghost"\>button\</btn\>
+\<btn btnstyle="micro-texture" state="disabled"\>button\</btn\>
+<btn btnstyle="micro-texture" @click="dosomething">button</btn>
