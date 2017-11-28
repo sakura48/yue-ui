@@ -12,7 +12,11 @@
     },
     methods: {
       handleclick (ev) {
-        this.$emit('click', ev)
+        if(this.state == 'disabled'){
+          return false
+        } else{
+          this.$emit('click', ev)
+        }
       }
     },
     computed: {
