@@ -8,11 +8,78 @@
 </head>
 <body>
 <div id="app">
-  <btn></btn>
+  <table>
+    <tr>
+      <th></th>
+      <th>default</th>
+      <th>hover</th>
+      <th>active</th>
+      <th>disabled</th>
+    </tr>
+    <tr>
+      <td>micro-texture</td>
+      <td>
+        <btn btnstyle="micro-texture"  @click="path">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="micro-texture" state="hover">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="micro-texture" state="active">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="micro-texture" state="disabled">button</btn>
+      </td>
+    </tr>
+    <tr>
+      <td>ghost</td>
+      <td>
+        <btn btnstyle="ghost">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="ghost" state="hover">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="ghost" state="active">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="ghost" state="disabled">button</btn>
+      </td>
+    </tr>
+    <tr>
+      <td>radius</td>
+      <td>
+        <btn btnstyle="radius">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="radius" state="hover">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="radius" state="active">button</btn>
+      </td>
+      <td>
+        <btn btnstyle="radius" state="disabled">button</btn>
+      </td>
+    </tr>
+  </table>
 </div>
+
 <script>
   new Vue({
-    el: '#app'
+    el: '#app',
+    data () {
+      return {
+        path: ''
+      }
+    },
+    methods: {
+      path (ev) {
+        console.log(111)
+      }
+    },
+    mounted () {
+      console.log(this)
+    }
   })
 </script>
 </body>
