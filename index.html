@@ -19,7 +19,7 @@
     <tr>
       <td>micro-texture</td>
       <td>
-        <btn btnstyle="micro-texture"  @click="path">button</btn>
+        <btn btnstyle="micro-texture" @click="path">button</btn>
       </td>
       <td>
         <btn btnstyle="micro-texture" state="hover">button</btn>
@@ -67,18 +67,13 @@
 <script>
   new Vue({
     el: '#app',
-    data () {
-      return {
-        path: ''
-      }
+    data: {
+      path: ''
     },
     methods: {
       path (ev) {
         console.log(111)
       }
-    },
-    mounted () {
-      console.log(this)
     }
   })
 </script>
