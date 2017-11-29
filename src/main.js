@@ -1,11 +1,16 @@
+import './css/main.css'
+import '../node_modules/bootstrap/dist/css/bootstrap-grid.css'
+
 import HelloWorld from './components/helloworld/index.js'
-import carrousel3d from './components/carrousel3d/index.js'
-import todo from './components/todo/index.js'
+import Carrousel3d from './components/carrousel3d/index.js'
+import Todo from './components/todo/index.js'
+import Btn from './components/btn/index.js'
 
 const components = [
   HelloWorld,
-  carrousel3d,
-  todo
+  Carrousel3d,
+  Todo,
+  Btn
 ]
 
 const install = function (Vue) {
