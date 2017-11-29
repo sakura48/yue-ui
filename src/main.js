@@ -5,12 +5,18 @@ import HelloWorld from './components/helloworld/index.js'
 import Carrousel3d from './components/carrousel3d/index.js'
 import Todo from './components/todo/index.js'
 import Btn from './components/btn/index.js'
+import Container from './components/container/index.js'
+import Row from './components/row/index.js'
+import Col from './components/col/index.js'
 
 const components = [
   HelloWorld,
   Carrousel3d,
   Todo,
-  Btn
+  Btn,
+  Container,
+  Row,
+  Col
 ]
 
 const install = function (Vue) {
