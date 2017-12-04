@@ -1,5 +1,19 @@
-# To-do-list
+# To-do-list 
 
-> Author: [JaneSu](https://github.com/JaneSu)
+**created by [JaneSu](https://github.com/JaneSu)**
 
-> GitHub: https://github.com/JaneSu
+**View**
+
+> To-do-list
+
+## API
+
+* props
+
+* events
+
+* methods
+
+## Example
+
+...
