@@ -8,7 +8,6 @@ import Btn from './components/btn/index.js'
 import Container from './components/container/index.js'
 import Row from './components/row/index.js'
 import Col from './components/col/index.js'
-import Menu from './components/menu/index.js'
 const components = [
   HelloWorld,
   Carrousel3d,
@@ -16,8 +15,7 @@ const components = [
   Btn,
   Container,
   Row,
-  Col,
-  Menu
+  Col
 ]
 
 const install = function (Vue) {
