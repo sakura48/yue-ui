@@ -7,7 +7,7 @@ class Ball {
     this.v = 2
     this.color = (function () {
       let hue = Math.ceil(Math.random() * 360)
-      return 'hsla(' + hue + ',30%,70%,0.5)'
+      return 'hsla(' + hue + ',25%,70%,0.5)'
     })()
   }
 

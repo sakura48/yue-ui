@@ -10,7 +10,7 @@
 
 * props
 
-1. styleobj - div的style，json格式
+1. styleobj - json类型 同div的style
 
 * events
 

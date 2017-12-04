@@ -7,7 +7,7 @@
 
   export default {
     name: 'canvasbg',
-    props: ['size', 'ballnum', 'r'],
+    props: ['w', 'h', 'ballnum', 'r'],
     data () {
       return {
         ctx: null,
@@ -34,10 +34,10 @@
     },
     computed: {
       canvaswidth () {
-        return document.documentElement.clientWidth
+        return (this.w || document.documentElement.clientWidth)
       },
       canvasheight () {
-        return document.documentElement.clientHeight
+        return (this.h || document.documentElement.clientHeight)
       }
     },
     mounted () {

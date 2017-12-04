@@ -1,18 +1,19 @@
-# 工具菜单
+# canvas背景
 
 **created by [sakura48](https://github.com/sakura48)**
 
 **Basic**
 
-> 工具菜单
+> canvas背景
 
 ## API
 
 * props
 
-1. r - 必选 String类型 菜单半径
-2. p - 必选 值为left,right
-
+1. w - 可选 Number类型 canvas背景的宽 默认为屏宽
+2. h - 可选 Number类型 canvas背景的高 默认为屏高
+3. ballnum - 必选 Number类型
+4. r - 必选 Number类型
 * events
 
 无
@@ -23,4 +24,4 @@
 
 ## Example
 
-\<toolmenu r="30" p="left"\>tool\</toolmenu\>
+\<canvasbg w="1000" h="500" r="40" ballnum="60"\>tool\</canvasbg\>

@@ -8,6 +8,9 @@ import Btn from './components/btn/index.js'
 import Container from './components/container/index.js'
 import Row from './components/row/index.js'
 import Col from './components/col/index.js'
+import Menu from './components/menu/index.js'
+import Scrolldiv from './components/scrolldiv/index.js'
+import Canvasbg from './components/canvasbg/index.js'
 
 const components = [
   HelloWorld,
@@ -16,7 +19,10 @@ const components = [
   Btn,
   Container,
   Row,
-  Col
+  Col,
+  Menu,
+  Scrolldiv,
+  Canvasbg
 ]
 
 const install = function (Vue) {

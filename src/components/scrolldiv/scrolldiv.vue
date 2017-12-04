@@ -37,13 +37,13 @@
         this.scrollwidth = this.$refs.context.scrollWidth
         if (this.$refs.context.scrollHeight > parseInt(this.h)) {
           this.vscrollstyle.height = Math.floor(parseInt(this.h) / this.scrollheight * parseInt(this.h)) + 'px'
-          if(parseInt(this.vscrollstyle.height) < 100){
+          if (parseInt(this.vscrollstyle.height) < 100) {
             this.vscrollstyle.height = '100px'
           }
         }
         if (this.$refs.context.scrollWidth > parseInt(this.w)) {
           this.hscrollstyle.width = Math.floor(parseInt(this.w) / this.scrollwidth * parseInt(this.w)) + 'px'
-          if(parseInt(this.hscrollstyle.width) < 100){
+          if (parseInt(this.hscrollstyle.width) < 100) {
             this.hscrollstyle.width = '100px'
           }
         }
@@ -55,29 +55,29 @@
         let y = ev.pageY
         let top = parseInt(this.vscrollstyle.top)
         document.onmousemove = (event) => {
-          if(event.pageY - y > 0){
-            if(top + parseInt(this.vscrollstyle.height) < this.h){
+          if (event.pageY - y > 0) {
+            if (top + parseInt(this.vscrollstyle.height) < this.h) {
               this.vscrollstyle.top = top + event.pageY - y + 'px'
               top = parseInt(this.vscrollstyle.top)
               y = event.pageY
-            } else{
+            } else {
               this.vscrollstyle.top = this.h - parseInt(this.vscrollstyle.height) + 'px'
             }
-          } else{
-            if(top > 0){
+          } else {
+            if (top > 0) {
               this.vscrollstyle.top = top + event.pageY - y + 'px'
               top = parseInt(this.vscrollstyle.top)
               y = event.pageY
-            } else{
+            } else {
               this.vscrollstyle.top = '0px'
             }
           }
         }
         document.onmouseup = () => {
-          if(top < 0){
+          if (top < 0) {
             this.vscrollstyle.top = '0px'
           }
-          if(parseInt(this.vscrollstyle.height) + top > this.h){
+          if (parseInt(this.vscrollstyle.height) + top > this.h) {
             this.vscrollstyle.top = this.h - parseInt(this.vscrollstyle.height) + 'px'
           }
           document.onmousemove = null
@@ -90,29 +90,29 @@
         let x = ev.pageX
         let left = parseInt(this.hscrollstyle.left)
         document.onmousemove = (event) => {
-          if(event.pageX - x > 0){
-            if(left + parseInt(this.hscrollstyle.width) < this.w){
+          if (event.pageX - x > 0) {
+            if (left + parseInt(this.hscrollstyle.width) < this.w) {
               this.hscrollstyle.left = left + event.pageX - x + 'px'
               left = parseInt(this.hscrollstyle.left)
               x = event.pageX
-            } else{
+            } else {
               this.hscrollstyle.left = this.w - parseInt(this.hscrollstyle.width) + 'px'
             }
-          } else{
-            if(left > 0){
+          } else {
+            if (left > 0) {
               this.hscrollstyle.left = left + event.pageX - x + 'px'
               left = parseInt(this.hscrollstyle.left)
               x = event.pageX
-            } else{
+            } else {
               this.hscrollstyle.left = '0px'
             }
           }
         }
         document.onmouseup = () => {
-          if(left < 0){
+          if (left < 0) {
             this.hscrollstyle.left = '0px'
           }
-          if(parseInt(this.hscrollstyle.width) + left > this.w){
+          if (parseInt(this.hscrollstyle.width) + left > this.w) {
             this.hscrollstyle.left = this.w - parseInt(this.hscrollstyle.width) + 'px'
           }
           document.onmousemove = null
@@ -136,7 +136,7 @@
       })
       this.$refs.scrolldiv.addEventListener('mousewheel', (ev) => {
         event.preventDefault()
-        if(this.h >= this.scrollheight){
+        if (this.h >= this.scrollheight) {
           return false
         }
         if (ev.wheelDelta === 120) {
