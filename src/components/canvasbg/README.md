@@ -14,6 +14,7 @@
 2. h - 可选 Number类型 canvas背景的高 默认为屏高
 3. ballnum - 必选 Number类型
 4. r - 必选 Number类型
+
 * events
 
 无
