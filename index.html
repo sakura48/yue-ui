@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>yue-ui demo</title>
-    <!-- dependencies vue -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <!-- yue-ui -->
-  </head>
-  <body>
-    <div id="app">
-      <!-- test your code -->
-    </div>
-    <!--init vue-->
-    <script>
-      new Vue({
-        el: '#app'
-      })
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>yue-ui demo</title>
+  <!-- dependencies vue -->
+  <script src="vue.js"></script>
+  <!-- yue-ui -->
+</head>
+<body>
+<div id="app">
+  <!-- test your code -->
+  <y-input
+    name="hello"
+    placeholder="hello"
+    v-model="message"
+    suffix-icon="times"
+    @focus="handleFocus"
+    @change="handleChange"
+    @blur="handleBlur"
+    @suf-icon-click="sufIconClick"
+    @prepend-click="prependClick"
+  ></y-input>
+</div>
+<!--init vue-->
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      r: 200,
+      p: 0,
+      s: 'active'
+    },
+  })
+</script>
+</body>
 </html>
