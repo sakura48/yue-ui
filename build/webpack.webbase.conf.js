@@ -9,25 +9,16 @@ function resolve (dir) {
 }
 
 module.exports = {
-  context: path.resolve(__dirname, '../'),
-  entry: function () {
-    let ent = {}
-    let entrys = JSON.parse(process.env.npm_config_argv).remain
-    if (entrys.length !== 0) {
-      entrys.map(en => {
-        ent[en] = './src/components/' + en + '/index.js'
-      })
-    } else {
-      ent['yue-ui'] = './src/main.js'
-    }
-    return ent
+  entry: {
+    app: './web/main.js'
   },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+      : config.dev.assetsPublicPath,
+    libraryTarget: 'umd'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -42,7 +33,7 @@ module.exports = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
+        include: [resolve('src'), resolve('test'), resolve('web')],
         options: {
           formatter: require('eslint-friendly-formatter'),
           emitWarning: !config.dev.showEslintErrorsInOverlay
@@ -56,7 +47,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src'), resolve('test'), resolve('web')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

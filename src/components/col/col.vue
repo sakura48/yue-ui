@@ -7,9 +7,6 @@
 <script type="text/ecmascript-6">
   export default {
     name: 'YCol',
-    data () {
-
-    },
     props: {
       col: {
         type: Number,

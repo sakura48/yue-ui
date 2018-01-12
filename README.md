@@ -25,4 +25,7 @@ npm run unit
 
 # 运行测试用例
 npm test
+
+# 启动demo页面服务
+npm run web
 ```

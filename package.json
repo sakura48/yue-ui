@@ -10,9 +10,12 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "web": "webpack-dev-server --inline --progress --config build/webpack.web.conf.js"
   },
   "dependencies": {
+    "async-validator": "^1.8.2",
+    "font-awesome": "github:FortAwesome/Font-Awesome",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

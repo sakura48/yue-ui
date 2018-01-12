@@ -6,9 +6,6 @@
 
 <script type="text/ecmascript-6">
   export default {
-    name: 'YRow',
-    data () {
-
-    }
+    name: 'YRow'
   }
 </script>

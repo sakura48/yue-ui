@@ -1,38 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>yue-ui demo</title>
-    <style>
-      #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        padding: 30px;
-      }
-      .demo-card {
-        border: 1px solid #dedede;
-        border-radius: 4px;
-        box-shadow: 3px 3px 3px #e8e8e8;
-        padding: 20px;
-        height: 500px;
-      }
-      h1 {
-        text-align: center;
-        color: #606266;
-        margin-bottom: 20px;
-      }
-    </style>
-    <!-- dependencies vue -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <!-- yue-ui -->
-    <link href="./static/css/yue-ui.css" rel="stylesheet">
-    <script type="text/javascript" src="./static/js/yue-ui.js"></script>
-  </head>
-  <body>
+<template>
   <div id="app">
-    <!-- test your code -->
     <y-container>
       <y-row>
         <y-col :col="6" :md="6">
@@ -68,11 +35,13 @@
       </y-row>
     </y-container>
   </div>
-  <!--init vue-->
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
+</template>
+
+<script>
+  export default {
+    name: 'app',
+    data () {
+      return {
         user: {
           username: 'sy',
           age: 18,
@@ -94,26 +63,46 @@
             { required: true, message: '请选择角色' }
           ]
         }
-      },
-      created () {
-
-      },
-      methods: {
-        onsubmit () {
-          this.$refs['userForm'].validate((valid) => {
-            if (valid) {
-              alert(JSON.stringify(this.user))
-            } else {
-              console.log('error submit!!')
-              return false
-            }
-          })
-        },
-        resetForm () {
-          this.$refs['userForm'].resetForm()
-        }
       }
-    })
-  </script>
-  </body>
-</html>
+    },
+    created () {
+
+    },
+    methods: {
+      onsubmit () {
+        this.$refs['userForm'].validate((valid) => {
+          if (valid) {
+            alert(JSON.stringify(this.user))
+          } else {
+            console.log('error submit!!')
+            return false
+          }
+        })
+      },
+      resetForm () {
+        this.$refs['userForm'].resetForm()
+      }
+    }
+  }
+</script>
+
+<style>
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 30px;
+  }
+  .demo-card {
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #e8e8e8;
+    padding: 20px;
+    height: 500px;
+  }
+  h1 {
+    text-align: center;
+    color: #606266;
+    margin-bottom: 20px;
+  }
+</style>
